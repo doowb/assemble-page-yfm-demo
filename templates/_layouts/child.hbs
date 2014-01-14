@@ -1,0 +1,27 @@
+---
+title: This title is from CHILD.HBS
+layout: parent
+---
+<!-- Navbar
+================================================== -->
+{{> navbar-fixed-top }}
+
+<!-- Subhead
+================================================== -->
+<header class="masthead subhead">
+  <div class="container">
+    <div class="row">
+      <div class="col col-lg-12">
+        <h1> {{ uppercase title }} </h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Page content
+================================================== -->
+<div class="container">
+  {{#markdown}}
+    {{> body }}
+  {{/markdown}}
+</div>

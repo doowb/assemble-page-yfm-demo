@@ -1,0 +1,21 @@
+---
+title: This title is from PARENT.HBS
+description: This description is from PAGE YFM (multiple.hbs)
+lead: This lead is from PARENT LAYOUT YFM (parent.hbs)
+quux: This property is from PARENT LAYOUT YFM (parent.hbs)
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{title}} | {{site.title}}</title>
+    <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://getbootstrap.com/docs-assets/css/docs.css">
+  </head>
+  <body>
+
+    {{> body }}
+
+    <script src="{{assets}}/js/highlight.js"></script>
+  </body>
+</html>

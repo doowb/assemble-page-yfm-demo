@@ -1,0 +1,31 @@
+# =============================================
+# Build config
+# =============================================
+
+root:             _gh_pages
+dest:             <%= site.root %>
+assets:           <%= site.dest %>/assets
+
+# Data
+data:             data
+
+# Templates
+templates:        templates
+includes:         <%= site.templates %>/_includes
+layouts:          <%= site.templates %>/_layouts
+layoutext:        .hbs
+layout:           child
+
+# Extensions
+# helpers:          <%= site.templates %>/helpers/*.js
+# plugins:
+#   - assemble-contrib-anchors
+#   - assemble-contrib-permalinks
+#   - assemble-contrib-toc
+#   - assemble-contrib-wordcount
+
+# Theme
+# styles:           styles
+# components:       <%= site.styles %>/components
+
+title: YFM Example
