@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>This title is from PAGE YFM (multiple.hbs) | YFM Example</title>
+    <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://getbootstrap.com/docs-assets/css/docs.css">
+  </head>
+  <body>
+
+    
+<!-- Navbar
+================================================== -->
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../" class="navbar-brand">YFM Example</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li> <a href="./test.html">Test</a> </li>
+        <li> <a href="https://github.com/upstage/mixins/">GitHub Repo</a> </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Subhead
+================================================== -->
+<header class="masthead subhead">
+  <div class="container">
+    <div class="row">
+      <div class="col col-lg-12">
+        <h1> THIS TITLE IS FROM PAGE YFM (MULTIPLE.HBS) </h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Page content
+================================================== -->
+<div class="container">
+  <h1 id="-explicit-context"><code>explicit</code> context</h1>
+<p>Should be from <code>explicit.json</code>, then the YFM of the page, then the options, then the root.</p>
+<article id="foo">
+  <div class="title">
+    <h1>This title is from EXPLICIT.json</h1>
+    <h2 class="subtitle">  </h2>
+    <p class="lead">  </p>
+    <p class="quux">  </p>
+  </div>
+  <p class="description"> This description is from EXPLICIT.json </p>
+</article>
+
+
+<h1 id="-page-context"><code>page</code> context</h1>
+<p>Should be from the YFM of the page, then the options, then the root.</p>
+<article id="foo">
+  <div class="title">
+    <h1>This title is from PAGE YFM (multiple.hbs)</h1>
+    <h2 class="subtitle">  </h2>
+    <p class="lead"> This lead is from PAGE YFM (multiple.hbs) </p>
+    <p class="quux"> This property is from PAGE YFM (multiple.hbs) </p>
+  </div>
+  <p class="description"> This description is from PAGE YFM (multiple.hbs) </p>
+</article>
+
+
+<h1 id="-this-context"><code>this</code> context</h1>
+<p>Should be from the YFM of the page, then the options, then the root.</p>
+<article id="foo">
+  <div class="title">
+    <h1>This title is from PAGE YFM (multiple.hbs)</h1>
+    <h2 class="subtitle">  </h2>
+    <p class="lead"> This lead is from PAGE YFM (multiple.hbs) </p>
+    <p class="quux"> This property is from PAGE YFM (multiple.hbs) </p>
+  </div>
+  <p class="description"> This description is from PAGE YFM (multiple.hbs) </p>
+</article>
+
+
+<h1 id="-data-context"><code>data</code> context</h1>
+<p>Should be from the YFM of the include, <code>foo</code>, first; then fallback on <code>foo.json</code>, then the page, then the options, then the root.</p>
+<article id="foo">
+  <div class="title">
+    <h1></h1>
+    <h2 class="subtitle">  </h2>
+    <p class="lead">  </p>
+    <p class="quux">  </p>
+  </div>
+  <p class="description">  </p>
+</article>
+
+
+<h1 id="-foo-context"><code>foo</code> context</h1>
+<p>Should be from the YFM of the include, <code>foo</code>, first; then fallback on <code>foo.json</code>, then the page, then the options, then the root.</p>
+<article id="foo">
+  <div class="title">
+    <h1>This title is from FOO.json</h1>
+    <h2 class="subtitle">  </h2>
+    <p class="lead">  </p>
+    <p class="quux">  </p>
+  </div>
+  <p class="description"> This description is from FOO.json </p>
+</article>
+
+
+<h1 id="empty-context">empty context</h1>
+<p>Should be from the YFM of the include, <code>foo</code>, first; then fallback on <code>foo.json</code>, then the page, then the options, then the root.</p>
+<article id="foo">
+  <div class="title">
+    <h1>This title is from PAGE YFM (multiple.hbs)</h1>
+    <h2 class="subtitle">  </h2>
+    <p class="lead"> This lead is from PAGE YFM (multiple.hbs) </p>
+    <p class="quux"> This property is from PAGE YFM (multiple.hbs) </p>
+  </div>
+  <p class="description"> This description is from PAGE YFM (multiple.hbs) </p>
+</article>
+
+
+<h1 id="-bar-context-block-"><code>bar</code> context (block)</h1>
+<p>Should be from the YFM of the include, <code>foo</code>, first; then fallback on <code>foo.json</code>, then fallback on <code>bar.json</code>, then the page, then the options, then the root.</p>
+<article id="foo">
+  <div class="title">
+    <h1>This title is from BAR.json</h1>
+    <h2 class="subtitle">  </h2>
+    <p class="lead"> This lead is from BAR.json </p>
+    <p class="quux">  </p>
+  </div>
+  <p class="description"> This description is from BAR.json </p>
+</article>
+
+
+<h1 id="-parent-context-block-"><code>parent</code> context (block)</h1>
+<p>Should use the context from the page.</p>
+<article id="foo">
+  <div class="title">
+    <h1>This title is from PAGE YFM (multiple.hbs)</h1>
+    <h2 class="subtitle">  </h2>
+    <p class="lead"> This lead is from PAGE YFM (multiple.hbs) </p>
+    <p class="quux"> This property is from PAGE YFM (multiple.hbs) </p>
+  </div>
+  <p class="description"> This description is from PAGE YFM (multiple.hbs) </p>
+</article>
+
+
+
+
+<article id="foo">
+  <div class="title">
+    <h1>This title is from PAGE YFM (multiple.hbs)</h1>
+    <h2 class="subtitle">  </h2>
+    <p class="lead"> This lead is from PAGE YFM (multiple.hbs) </p>
+    <p class="quux"> This property is from PAGE YFM (multiple.hbs) </p>
+  </div>
+  <p class="description"> This description is from PAGE YFM (multiple.hbs) </p>
+</article>
+
+
+</div>
+
+    <script src="../js/highlight.js"></script>
+  </body>
+</html>
